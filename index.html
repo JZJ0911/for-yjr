@@ -403,7 +403,8 @@
 
     <div class="signed" id="signed" hidden>
       <p class="signok">已签：<b id="signedName"></b> · <span id="signedWhen"></span></p>
-      <button class="bigsign" id="replay">再看一次我们的视频 ♡</button>`n      <button class="resign" id="resign">不是我签的？重新签一次</button>
+      <button class="bigsign" id="replay">再看一次我们的视频 ♡</button>
+      <button class="resign" id="resign">不是我签的？重新签一次</button>
     </div>
   </div>
 
@@ -676,12 +677,14 @@
         <radialGradient id="glow" cx="50%" cy="50%" r="50%">
           <stop offset="0" stop-color="#ffd166" stop-opacity=".55"/><stop offset="1" stop-color="#ffd166" stop-opacity="0"/>
         </radialGradient>
-        <radialGradient id="frost" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffffff" stop-opacity=".82"/><stop offset=".62" stop-color="#ffffff" stop-opacity=".45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>`n        <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+        <radialGradient id="frost" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffffff" stop-opacity=".82"/><stop offset=".62" stop-color="#ffffff" stop-opacity=".45"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient>
+<radialGradient id="shadow" cx="50%" cy="50%" r="50%">
           <stop offset="0" stop-color="#c9a5b6" stop-opacity=".45"/><stop offset="1" stop-color="#c9a5b6" stop-opacity="0"/>
         </radialGradient>
       </defs>
 
-      <ellipse cx="160" cy="236" rx="156" ry="128" fill="url(#frost)"/>`n      <ellipse cx="160" cy="280" rx="126" ry="15" fill="url(#shadow)"/>
+      <ellipse cx="160" cy="236" rx="156" ry="128" fill="url(#frost)"/>
+<ellipse cx="160" cy="280" rx="126" ry="15" fill="url(#shadow)"/>
 
       <ellipse cx="160" cy="262" rx="118" ry="17" fill="url(#plate)"/>
       <ellipse cx="160" cy="258" rx="112" ry="14" fill="#fffdfe"/>
