@@ -527,9 +527,11 @@
     var KEY='day200.sign2', OLDKEY='day200.sign', TARGET='我们在一起两百天啦';
     function norm(s){ return (s||'').replace(/[s，。、,.;；!！?？"'“”‘’~～·.]/g,''); }
     function okPhrase(s){ var n=norm(s); return n===TARGET || n==='我们在一起200天啦'; }
+    var bgWasPlaying=false;
     function showVideo(){
       bindVideo();
       if(!vwrap) return;
+      if(media && !media.paused){ bgWasPlaying=true; try{ media.pause(); }catch(e){} }
       vwrap.hidden=false; document.documentElement.style.overflow='hidden'; document.body.style.overflow='hidden';
       if(vid){ try{ vid.currentTime=0; }catch(e){} var pr=vid.play(); if(pr&&pr.catch) pr.catch(function(){}); }
     }
@@ -538,6 +540,7 @@
       if(!vwrap) return;
       vwrap.hidden=true; document.documentElement.style.overflow=''; document.body.style.overflow='';
       if(vid&&!vid.paused){ try{ vid.pause(); }catch(e){} }
+      if(bgWasPlaying && media){ bgWasPlaying=false; var pr2=media.play(); if(pr2&&pr2.catch) pr2.catch(function(){}); }
     }
     if(false){
       vid.addEventListener('error',function(){ if(vmiss) vmiss.hidden=false; vid.style.display='none'; });
