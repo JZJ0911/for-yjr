@@ -517,6 +517,7 @@
         vid.dataset.bound='1';
         vid.addEventListener('error',function(){ if(vmiss){ vmiss.hidden=false; } vid.style.display='none'; });
         vid.addEventListener('loadeddata',function(){ if(vmiss){ vmiss.hidden=true; } vid.style.display=''; });
+        vid.addEventListener('ended',function(){ setTimeout(hideVideo, 600); });
       }
       if(vid && vid.error){ if(vmiss){ vmiss.hidden=false; } vid.style.display='none'; }
       if(vclose && !vclose.dataset.bound){
